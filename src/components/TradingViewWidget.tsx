@@ -57,7 +57,7 @@ const TradingViewWidget: React.FC<TradingViewWidgetProps> = ({
           allow_symbol_change: true,
           container_id: container.current.id,
           hide_side_toolbar: false,
-          studies: ["AO@tv-basicstudies", "MAExp@tv-basicstudies"],
+          studies: ["Awesome_Oscillator@tv-basicstudies", "MAExp@tv-basicstudies"],
           save_image: false
         });
       }
