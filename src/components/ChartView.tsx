@@ -3,7 +3,7 @@ import { useState } from 'react';
 import TradingViewWidget from './TradingViewWidget';
 import ChartSelector from './ChartSelector';
 import { Button } from '@/components/ui/button';
-import { SplitHorizontal, Layout } from 'lucide-react';
+import { LayoutGrid, Columns } from 'lucide-react';
 
 const ChartView = () => {
   const [isDualMode, setIsDualMode] = useState(false);
@@ -29,7 +29,7 @@ const ChartView = () => {
             onClick={toggleViewMode}
             title={isDualMode ? "Switch to Single View" : "Switch to Dual View"}
           >
-            {isDualMode ? <Layout className="h-4 w-4" /> : <SplitHorizontal className="h-4 w-4" />}
+            {isDualMode ? <LayoutGrid className="h-4 w-4" /> : <Columns className="h-4 w-4" />}
           </Button>
         </div>
       </div>
