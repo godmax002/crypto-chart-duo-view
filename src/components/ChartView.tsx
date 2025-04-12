@@ -6,9 +6,9 @@ import { Button } from '@/components/ui/button';
 import { LayoutGrid, Columns } from 'lucide-react';
 
 const ChartView = () => {
-  const [isDualMode, setIsDualMode] = useState(false);
+  const [isDualMode, setIsDualMode] = useState(true); // Default to dual mode
   const [symbol1, setSymbol1] = useState('BINANCE:BTCUSDT');
-  const [symbol2, setSymbol2] = useState('BINANCE:ETHUSDT');
+  const [symbol2, setSymbol2] = useState('BINANCE:FARTUSDT'); // Default to FARTCOIN as the second chart
 
   const toggleViewMode = () => {
     setIsDualMode(!isDualMode);
@@ -37,12 +37,12 @@ const ChartView = () => {
       <div className="flex-1 overflow-hidden grid gap-2 p-2" 
            style={{ gridTemplateRows: isDualMode ? '1fr 1fr' : '1fr' }}>
         <div className="min-h-0 bg-card rounded-md overflow-hidden shadow-lg">
-          <TradingViewWidget symbol={symbol1} />
+          <TradingViewWidget symbol={symbol1} interval="15" />
         </div>
         
         {isDualMode && (
           <div className="min-h-0 bg-card rounded-md overflow-hidden shadow-lg">
-            <TradingViewWidget symbol={symbol2} />
+            <TradingViewWidget symbol={symbol2} interval="15" />
           </div>
         )}
       </div>
