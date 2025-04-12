@@ -8,7 +8,7 @@ import { LayoutGrid, Columns } from 'lucide-react';
 const ChartView = () => {
   const [isDualMode, setIsDualMode] = useState(true); // Default to dual mode
   const [symbol1, setSymbol1] = useState('BINANCE:BTCUSDT');
-  const [symbol2, setSymbol2] = useState('BINANCE:FARTUSDT'); // Default to FARTCOIN as the second chart
+  const [symbol2, setSymbol2] = useState('BINANCE:FARTCOINUSDT.P'); // Updated FARTCOIN symbol
 
   const toggleViewMode = () => {
     setIsDualMode(!isDualMode);
