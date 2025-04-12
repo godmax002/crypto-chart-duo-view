@@ -5,6 +5,7 @@
 
 @layer base {
   :root {
+    /* Default dark theme */
     --background: 222 47% 11%;
     --foreground: 210 40% 98%;
 
@@ -43,6 +44,127 @@
     --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 217.2 32.6% 17.5%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Chart colors for dark theme */
+    --chart-bg: #151924;
+    --chart-text: #d1d4dc;
+    --chart-line: #2962FF;
+    --chart-green: #089981;
+    --chart-red: #F23645;
+  }
+
+  .light-theme {
+    /* Light theme */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+
+    /* Chart colors for light theme */
+    --chart-bg: #ffffff;
+    --chart-text: #131722;
+    --chart-line: #2962FF;
+    --chart-green: #089981;
+    --chart-red: #F23645;
+  }
+
+  .purple-theme {
+    /* Purple theme */
+    --background: 260 20% 10%;
+    --foreground: 260 10% 90%;
+
+    --card: 260 20% 12%;
+    --card-foreground: 260 10% 90%;
+
+    --popover: 260 20% 12%;
+    --popover-foreground: 260 10% 90%;
+
+    --primary: 260 80% 60%;
+    --primary-foreground: 260 10% 98%;
+
+    --secondary: 260 20% 20%;
+    --secondary-foreground: 260 10% 90%;
+
+    --muted: 260 20% 20%;
+    --muted-foreground: 260 10% 70%;
+
+    --accent: 260 20% 20%;
+    --accent-foreground: 260 10% 90%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 260 10% 98%;
+
+    --border: 260 20% 20%;
+    --input: 260 20% 20%;
+    --ring: 260 80% 60%;
+
+    /* Chart colors for purple theme */
+    --chart-bg: #1a1425;
+    --chart-text: #e2d9f3;
+    --chart-line: #9b87f5;
+    --chart-green: #06d6a0;
+    --chart-red: #ef476f;
+  }
+
+  .green-theme {
+    /* Green theme */
+    --background: 160 20% 10%;
+    --foreground: 160 10% 90%;
+
+    --card: 160 20% 12%;
+    --card-foreground: 160 10% 90%;
+
+    --popover: 160 20% 12%;
+    --popover-foreground: 160 10% 90%;
+
+    --primary: 160 80% 40%;
+    --primary-foreground: 160 10% 98%;
+
+    --secondary: 160 20% 20%;
+    --secondary-foreground: 160 10% 90%;
+
+    --muted: 160 20% 20%;
+    --muted-foreground: 160 10% 70%;
+
+    --accent: 160 20% 20%;
+    --accent-foreground: 160 10% 90%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 160 10% 98%;
+
+    --border: 160 20% 20%;
+    --input: 160 20% 20%;
+    --ring: 160 80% 40%;
+
+    /* Chart colors for green theme */
+    --chart-bg: #0f2922;
+    --chart-text: #d0e8e2;
+    --chart-line: #00b894;
+    --chart-green: #00b894;
+    --chart-red: #e17055;
   }
 }
 

@@ -1,9 +1,9 @@
 
 import React, { useEffect, useRef } from 'react';
+import { useTheme } from '@/context/ThemeContext';
 
 interface TradingViewWidgetProps {
   symbol: string;
-  theme?: 'light' | 'dark';
   autosize?: boolean;
   interval?: string;
 }
@@ -16,12 +16,15 @@ declare global {
 
 const TradingViewWidget: React.FC<TradingViewWidgetProps> = ({
   symbol = 'BINANCE:BTCUSDT',
-  theme = 'dark',
   autosize = true,
   interval = '15' // Changed default from '1D' to '15' (15 minutes)
 }) => {
   const container = useRef<HTMLDivElement>(null);
   const scriptRef = useRef<HTMLScriptElement | null>(null);
+  const { theme } = useTheme();
+  
+  // Determine if we should use dark theme
+  const isDarkTheme = theme !== 'light-theme';
 
   useEffect(() => {
     if (container.current) {
@@ -46,10 +49,10 @@ const TradingViewWidget: React.FC<TradingViewWidgetProps> = ({
           symbol,
           interval,
           timezone: "Etc/UTC",
-          theme,
+          theme: isDarkTheme ? 'dark' : 'light',
           style: "1",
           locale: "en",
-          toolbar_bg: "#151924",
+          toolbar_bg: isDarkTheme ? "#151924" : "#f1f3f6",
           enable_publishing: false,
           allow_symbol_change: true,
           container_id: container.current.id,
@@ -65,7 +68,7 @@ const TradingViewWidget: React.FC<TradingViewWidgetProps> = ({
         container.current.innerHTML = '';
       }
     };
-  }, [symbol, theme, autosize, interval]);
+  }, [symbol, isDarkTheme, autosize, interval]);
 
   return (
     <div 

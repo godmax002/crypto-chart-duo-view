@@ -64,11 +64,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				chart: {
-					bg: '#151924',
-					text: '#d1d4dc',
-					line: '#2962FF',
-					green: '#089981',
-					red: '#F23645'
+					bg: 'var(--chart-bg)',
+					text: 'var(--chart-text)',
+					line: 'var(--chart-line)',
+					green: 'var(--chart-green)',
+					red: 'var(--chart-red)'
 				}
 			},
 			borderRadius: {

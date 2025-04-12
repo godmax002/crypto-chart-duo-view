@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import TradingViewWidget from './TradingViewWidget';
 import ChartSelector from './ChartSelector';
+import ThemeSwitcher from './ThemeSwitcher';
 import { Button } from '@/components/ui/button';
 import { LayoutGrid, Columns } from 'lucide-react';
 
@@ -31,6 +32,7 @@ const ChartView = () => {
           >
             {isDualMode ? <LayoutGrid className="h-4 w-4" /> : <Columns className="h-4 w-4" />}
           </Button>
+          <ThemeSwitcher />
         </div>
       </div>
 
