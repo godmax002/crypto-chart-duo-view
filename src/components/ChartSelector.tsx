@@ -19,6 +19,7 @@ const popularSymbols = [
   { label: 'ADA/USDT', value: 'BINANCE:ADAUSDT' },
   { label: 'DOGE/USDT', value: 'BINANCE:DOGEUSDT' },
   { label: 'SHIB/USDT', value: 'BINANCE:SHIBUSDT' },
+  { label: 'FART/USDT', value: 'BINANCE:FARTUSDT' },
 ];
 
 const ChartSelector: React.FC<ChartSelectorProps> = ({ index, symbol, onSymbolChange }) => {
